@@ -1,0 +1,120 @@
+<%= form_for(@employee) do |f| %>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @employee.errors[:name].any? ? " error" : "" %>">
+    <%= f.label :name, 'Nombre' %><br>
+  <div class="controls">
+    <%= f.text_field :name, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @employee.errors[:name].any? ? @employee.errors[:name].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @employee.errors[:surname].any? ? " error" : "" %>">
+    <%= f.label :surname, 'Apellido(s)' %><br>
+    <div class="controls">
+    <%= f.text_field :surname, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @employee.errors[:surname].any? ? @employee.errors[:surname].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @employee.errors[:rfc].any? ? " error" : "" %>">
+    <%= f.label :rfc, 'RFC' %><br>
+    <div class="controls">
+    <%= f.text_field :rfc, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @employee.errors[:rfc].any? ? @employee.errors[:rfc].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @employee.errors[:address].any? ? " error" : "" %>">
+    <%= f.label :address, 'Direccion' %><br>
+    <div class="controls">
+    <%= f.text_field :address, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @employee.errors[:address].any? ? @employee.errors[:address].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @employee.errors[:ext_num].any? ? " error" : "" %>">
+    <%= f.label :ext_num, 'Numero Exterior' %><br>
+    <div class="controls">
+    <%= f.text_field :ext_num, :start_year => 1950, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @employee.errors[:ext_num].any? ? @employee.errors[:ext_num].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @employee.errors[:int_num].any? ? " error" : "" %>">
+    <%= f.label :int_num, 'Numero Interior' %><br>
+    <div class="controls">
+    <%= f.text_field :int_num, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @employee.errors[:int_num].any? ? @employee.errors[:int_num].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @employee.errors[:neighborhood].any? ? " error" : "" %>">
+    <%= f.label :neighborhood, 'Colonia' %><br>
+    <div class="controls">
+    <%= f.text_field :neighborhood, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @employee.errors[:neighborhood].any? ? @employee.errors[:neighborhood].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @employee.errors[:city].any? ? " error" : "" %>">
+    <%= f.label :city, 'Ciudad' %><br>
+    <div class="controls">
+    <%= f.text_field :city, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @employee.errors[:city].any? ? @employee.errors[:city].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @employee.errors[:country].any? ? " error" : "" %>">
+    <%= f.label :country, 'Estado' %><br>
+    <div class="controls">
+    <%= f.text_field :country, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @employee.errors[:country].any? ? @employee.errors[:country].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @employee.errors[:zip].any? ? " error" : "" %>">
+    <%= f.label :zip, 'CP' %><br>
+    <div class="controls">
+    <%= f.text_field :zip, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @employee.errors[:zip].any? ? @employee.errors[:zip].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <br/>
+    <%= f.submit 'Guardar', :class=>"btn btn-success" %>
+  </div>
+<% end %>

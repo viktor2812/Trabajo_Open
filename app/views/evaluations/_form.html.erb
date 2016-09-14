@@ -1,0 +1,99 @@
+<%= form_for(@evaluation) do |f| %>
+
+
+<div class="col-md-9 col-sm-9 col-xs-12"> 
+<div class="form-group">
+  
+<div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <div class="checkbox">
+        <label>
+            <%= f.check_box :repuve, :value => 'SI'%> REPUVE
+        </label>
+    </div> 
+    Descripcion <%=f.text_field :repuve, :class=>"form-control"%>   Precio <%=f.text_field :repuve, :class=>"form-control"%> 
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">      
+    <div class="checkbox">
+        <label>
+            <%= f.check_box :rapi, :value => 'SI' %> RAPI
+        </label>
+    </div> 
+    Descripcion <%=f.text_field :repuve, :class=>"form-control"%>   Precio <%=f.text_field :repuve, :class=>"form-control"%> 
+  </div>
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <div class="checkbox">
+        <label>
+            <%= f.check_box :amis, :value => 'SI' %> AMIS 
+        </label>
+    </div> 
+    Descripcion <%=f.text_field :repuve, :class=>"form-control"%>   Precio <%=f.text_field :repuve, :class=>"form-control"%> 
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <div class="checkbox">
+        <label>
+            <%= f.check_box :transunion, :value => 'SI' %> TRANSUNION
+        </label>
+    </div> 
+    Descripcion <%=f.text_field :repuve, :class=>"form-control"%>   Precio <%=f.text_field :repuve, :class=>"form-control"%> 
+  </div>
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <div class="checkbox">
+        <label>
+            <%= f.check_box :ci_auto, :value => 'SI' %> CI_AUTO
+        </label>
+    </div> 
+    Descripcion <%=f.text_field :repuve, :class=>"form-control"%>   Precio <%=f.text_field :repuve, :class=>"form-control"%> 
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <div class="checkbox">
+        <label>
+            <%= f.check_box :agency_invoice_ok, :value => 'SI' %> AGENCY_INVOCE_OK
+        </label>
+    </div> 
+    Descripcion <%=f.text_field :repuve, :class=>"form-control"%>   Precio <%=f.text_field :repuve, :class=>"form-control"%> 
+  </div>
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <div class="checkbox">
+        <label>
+            <%= f.check_box :ine_ok, :value => 'SI' %> INE_OK
+        </label>
+    </div> 
+    Descripcion <%=f.text_field :repuve, :class=>"form-control"%>   Precio <%=f.text_field :repuve, :class=>"form-control"%> 
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <div class="checkbox">
+        <label>
+            <%= f.check_box :buho_ok, :value => 'SI' %> BUHO_OK
+        </label>
+    </div> 
+    Descripcion <%=f.text_field :repuve, :class=>"form-control"%>   Precio <%=f.text_field :repuve, :class=>"form-control"%> 
+  </div>
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <div class="checkbox">
+        <label>
+            <%= f.check_box :invoice_sat_ok, :value => 'SI' %> INVOICE_SAT_OK
+        </label>
+    </div> 
+    Descripcion <%=f.text_field :repuve, :class=>"form-control"%>   Precio <%=f.text_field :repuve, :class=>"form-control"%> 
+  </div>
+</div>
+</div> 
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <br/>
+    <%= f.submit 'Guardar', :class=>"btn btn-success" %>
+  </div>
+</div>
+<% end %>

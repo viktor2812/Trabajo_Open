@@ -1,0 +1,109 @@
+<%= form_for(@residence) do |f| %>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @residence.errors[:description].any? ? " error" : "" %>">
+    <%= f.label :description, 'Descripcion' %><br>
+  <div class="controls">
+    <%= f.text_field :description, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @residence.errors[:description].any? ? @residence.errors[:description].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @residence.errors[:year].any? ? " error" : "" %>">
+    <%= f.label :year, 'Año' %><br>
+    <div class="controls">
+    <%= f.text_field :year, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @residence.errors[:year].any? ? @residence.errors[:year].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @residence.errors[:street].any? ? " error" : "" %>">
+    <%= f.label :street, 'Calle' %><br>
+    <div class="controls">
+    <%= f.text_field :street, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @residence.errors[:street].any? ? @residence.errors[:street].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @residence.errors[:ext_numb].any? ? " error" : "" %>">
+    <%= f.label :ext_numb, '# Exterior' %><br>
+    <div class="controls">
+    <%= f.text_field :ext_numb, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @residence.errors[:ext_numb].any? ? @residence.errors[:ext_numb].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @residence.errors[:int_numb].any? ? " error" : "" %>">
+    <%= f.label :int_numb, '# Interior' %><br>
+    <div class="controls">
+    <%= f.text_field :int_numb, :start_year => 1950, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @residence.errors[:int_numb].any? ? @residence.errors[:int_numb].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @residence.errors[:neighborhood].any? ? " error" : "" %>">
+    <%= f.label :neighborhood, 'Colonia' %><br>
+    <div class="controls">
+    <%= f.text_field :neighborhood, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @residence.errors[:neighborhood].any? ? @residence.errors[:neighborhood].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @residence.errors[:city].any? ? " error" : "" %>">
+    <%= f.label :city, 'Ciudad' %><br>
+    <div class="controls">
+    <%= f.text_field :city, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @residence.errors[:city].any? ? @residence.errors[:city].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @residence.errors[:zip].any? ? " error" : "" %>">
+    <%= f.label :zip, 'CP' %><br>
+    <div class="controls">
+    <%= f.text_field :zip, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @residence.errors[:zip].any? ? @residence.errors[:zip].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @residence.errors[:commercial_cost].any? ? " error" : "" %>">
+    <%= f.label :commercial_cost, 'Precio Comercial' %><br>
+    <div class="controls">
+    <%= f.text_field :commercial_cost, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @residence.errors[:commercial_cost].any? ? @residence.errors[:commercial_cost].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <br/>
+    <%= f.submit 'Guardar', :class=>"btn btn-success" %>
+  </div>
+<% end %>

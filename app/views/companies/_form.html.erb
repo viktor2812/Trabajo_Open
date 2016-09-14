@@ -1,0 +1,120 @@
+<%= form_for(@company) do |f| %>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @company.errors[:company_name].any? ? " error" : "" %>">
+    <%= f.label :company_name, 'Nombre' %><br>
+  <div class="controls">
+    <%= f.text_field :company_name, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @company.errors[:company_name].any? ? @company.errors[:company_name].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @company.errors[:company_rfc].any? ? " error" : "" %>">
+    <%= f.label :company_rfc, 'RFC' %><br>
+    <div class="controls">
+    <%= f.text_field :company_rfc, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @company.errors[:company_rfc].any? ? @company.errors[:company_rfc].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @company.errors[:company_address].any? ? " error" : "" %>">
+    <%= f.label :company_address, 'Direccion' %><br>
+    <div class="controls">
+    <%= f.text_field :company_address, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @company.errors[:company_address].any? ? @company.errors[:company_address].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @company.errors[:company_ext_num].any? ? " error" : "" %>">
+    <%= f.label :company_ext_num, '# Exterior' %><br>
+    <div class="controls">
+    <%= f.text_field :company_ext_num, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @company.errors[:company_ext_num].any? ? @company.errors[:company_ext_num].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @company.errors[:company_int_num].any? ? " error" : "" %>">
+    <%= f.label :company_int_num, '# Interior' %><br>
+    <div class="controls">
+    <%= f.text_field :company_int_num, :start_year => 1950, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @company.errors[:company_int_num].any? ? @company.errors[:company_int_num].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @company.errors[:company_neighborhood].any? ? " error" : "" %>">
+    <%= f.label :company_neighborhood, 'Colonia' %><br>
+    <div class="controls">
+    <%= f.text_field :company_neighborhood, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @company.errors[:company_neighborhood].any? ? @company.errors[:company_neighborhood].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @company.errors[:company_city].any? ? " error" : "" %>">
+    <%= f.label :company_city, 'Ciudad' %><br>
+    <div class="controls">
+    <%= f.text_field :company_city, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @company.errors[:company_city].any? ? @company.errors[:company_city].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @company.errors[:company_zip].any? ? " error" : "" %>">
+    <%= f.label :company_zip, 'CP' %><br>
+    <div class="controls">
+    <%= f.text_field :company_zip, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @company.errors[:company_zip].any? ? @company.errors[:company_zip].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @company.errors[:company_telephone].any? ? " error" : "" %>">
+    <%= f.label :company_telephone, 'Telefono' %><br>
+    <div class="controls">
+    <%= f.text_field :company_telephone, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @company.errors[:company_telephone].any? ? @company.errors[:company_telephone].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @company.errors[:company_extension].any? ? " error" : "" %>">
+    <%= f.label :company_extension, 'Extencion' %><br>
+    <div class="controls">
+    <%= f.text_field :company_extension, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @company.errors[:company_extension].any? ? @company.errors[:company_extension].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <br/>
+    <%= f.submit 'Guardar', :class=>"btn btn-success" %>
+  </div>
+<% end %>

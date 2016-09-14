@@ -1,0 +1,76 @@
+<%= form_for(@motor) do |f| %>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @motor.errors[:brand].any? ? " error" : "" %>">
+    <%= f.label :brand, 'Marca' %><br>
+  <div class="controls">
+    <%= f.text_field :brand, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @motor.errors[:brand].any? ? @motor.errors[:brand].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @motor.errors[:model].any? ? " error" : "" %>">
+    <%= f.label :model, 'Modelo' %><br>
+    <div class="controls">
+    <%= f.text_field :model, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @motor.errors[:model].any? ? @motor.errors[:model].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @motor.errors[:year].any? ? " error" : "" %>">
+    <%= f.label :year, 'Año' %><br>
+    <div class="controls">
+    <%= f.text_field :year, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @motor.errors[:year].any? ? @motor.errors[:year].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @motor.errors[:serie_chasis].any? ? " error" : "" %>">
+    <%= f.label :serie_chasis, 'Serie Chasis' %><br>
+    <div class="controls">
+    <%= f.text_field :serie_chasis, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @motor.errors[:serie_chasis].any? ? @motor.errors[:serie_chasis].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @motor.errors[:serie_engine].any? ? " error" : "" %>">
+    <%= f.label :serie_engine, 'Serie Motor' %><br>
+    <div class="controls">
+    <%= f.text_field :serie_engine, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @motor.errors[:serie_engine].any? ? @motor.errors[:serie_engine].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+  <div class="control-group<%= @motor.errors[:commercial_cost].any? ? " error" : "" %>">
+    <%= f.label :commercial_cost, 'Precio Comercial' %><br>
+    <div class="controls">
+    <%= f.text_field :commercial_cost, :class=>"form-control" %>
+  <span class="help-inline">    
+    <%= @motor.errors[:commercial_cost].any? ? @motor.errors[:commercial_cost].to_s[/\w([^"]*)/] : "" %></span>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+    <br/>
+    <%= f.submit 'Guardar', :class=>"btn btn-success" %>
+  </div>
+<% end %>
